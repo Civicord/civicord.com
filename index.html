@@ -1,0 +1,82 @@
+<html><head>
+    <title>civicord</title>
+    <style>
+        body {font-family: "Times New Roman", Times, serif;}
+    
+        .links {
+            font-size: 30px;
+            -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    
+        a {
+            color:#003dfd;
+            cursor: pointer;
+        }
+    
+        .rb {
+            color: linear-gradient(238deg, #fd8800, #fd008f, #9700fd, #003dfd, #05c7e6, #4bd58d);
+            animation: colorShift 30s infinite;
+            cursor: pointer;
+        }
+        
+    
+        @keyframes colorShift {0% {color: red;}25% {color: blue;}50% {color: green;}75% {color: purple;}100% {color: orange;}};
+        @-webkit-keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+    </style>
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-square150x150logo" content="https://civicord.com/logo.png">
+    <link rel="apple-touch-icon" href="https://civicord.com/logo.png">
+    <link rel="icon" href="https://civicord.com/logo.png" type="image/png" sizes="16x16">
+    <meta property="og:image" content="https://civicord.com/logo.png">
+    <link rel="canonical" href="https://civicord.com/">
+    <meta property="og:url" content="https://civicord.com/">
+    <meta property="og:site_name" content="civicord">
+    <meta name="description" content="insert generic description here">
+    <script type="application/ld+json">
+      {"name":"civicord","description":"insert generic description here","@type":"WebSite","url":"https://civicord.com/","headline":"civicord","@context":"http://schema.org"}
+    </script>
+</head>
+<body>
+    <h1 style="font-size: 85px;">i<span class="rb">c</span>vicord</h1>
+    <div class="links">
+        <a href="//runs.civicord.com">runs</a><br>
+        <a href="/us.html">who we are</a><br>
+        <a href="ftp://ftp.civicord.com">ftp server</a><br>
+        <!-- <a href="#" onclick="alert('hi[at]this domain')">contact</a> -->
+    </div>
+    <audio id="clickc" src="/res/bauwa.wav"></audio>
+    <noscript><h2>you <i>might</i> need javascript</h2></noscript>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+function cs(){
+    alert("coming soon!")
+}
+
+
+const fonts = [
+  "Arial, Helvetica, sans-serif",
+  "Verdana, Geneva, sans-serif",
+  "Trebuchet MS, Helvetica, sans-serif",
+  "Gill Sans, Gill Sans MT, sans-serif",
+  "Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif",
+  "Tahoma, Geneva, sans-serif",
+  "Times New Roman, Times, serif",
+  "Georgia, serif",
+  "Garamond, serif",
+  "Courier New, Courier, monospace",
+  "Lucida Console, monospace",
+  "Monaco, monospace",
+  "Comic Sans MS, cursive, sans-serif",
+  "Impact, Charcoal, sans-serif",
+  "Palatino Linotype, Book Antiqua, Palatino, serif"
+];
+
+
+$(".rb").on( "click", function() {
+    $('body').css("font-family", fonts[Math.floor(Math.random() * fonts.length)]);
+    document.querySelector("#clickc").play();
+});
+</script>
+</html>
